@@ -1,0 +1,99 @@
+{
+  "_fv": 15,
+  "_type": "gui",
+  "definition": {
+    "type": 1,
+    "width": 176,
+    "height": 166,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "button",
+        "data": {
+          "text": "Undead",
+          "onClick": {
+            "name": "MakeUndead"
+          },
+          "width": 80,
+          "height": 20,
+          "name": "Undead",
+          "x": 132,
+          "y": 44
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Harpie",
+          "onClick": {
+            "name": "MakeHarpie"
+          },
+          "width": 80,
+          "height": 20,
+          "name": "Harpie",
+          "x": 132,
+          "y": 71
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Flamekin",
+          "onClick": {
+            "name": "MakeFlamekin"
+          },
+          "width": 80,
+          "height": 20,
+          "name": "Flamekin",
+          "x": 132,
+          "y": 98
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Dwarf",
+          "onClick": {
+            "name": "MakeDwarf"
+          },
+          "width": 80,
+          "height": 20,
+          "name": "Dwarf",
+          "x": 213,
+          "y": 44
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Mermaid",
+          "onClick": {
+            "name": "MakeMermaid"
+          },
+          "width": 80,
+          "height": 20,
+          "name": "Mermaid",
+          "x": 213,
+          "y": 71
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Radix",
+          "onClick": {
+            "name": "MakeRadix"
+          },
+          "width": 80,
+          "height": 20,
+          "name": "Radix",
+          "x": 213,
+          "y": 98
+        }
+      }
+    ]
+  }
+}
