@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "creraces:items/nature_magic_staff_wood"
+  }
+}

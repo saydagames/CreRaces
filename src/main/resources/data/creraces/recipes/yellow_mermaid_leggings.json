@@ -1,0 +1,36 @@
+{
+  "group": "creraces",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    " 7 "
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:gold_ingot"
+    },
+    "1": {
+      "item": "minecraft:gold_block"
+    },
+    "2": {
+      "item": "minecraft:gold_ingot"
+    },
+    "3": {
+      "item": "minecraft:gold_ingot"
+    },
+    "4": {
+      "item": "minecraft:golden_leggings"
+    },
+    "5": {
+      "item": "minecraft:gold_ingot"
+    },
+    "7": {
+      "item": "minecraft:gold_ingot"
+    }
+  },
+  "result": {
+    "item": "creraces:yellow_mermaid_armor_leggings",
+    "count": 1
+  }
+}

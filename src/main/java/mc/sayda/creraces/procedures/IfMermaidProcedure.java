@@ -6,7 +6,7 @@ import net.minecraftforge.common.MinecraftForge;
 
 import net.minecraft.world.World;
 import net.minecraft.world.IWorld;
-import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.DamageSource;
 import net.minecraft.potion.Effects;
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.entity.LivingEntity;
@@ -33,37 +33,459 @@ public class IfMermaidProcedure extends CreracesModElements.ModElement {
 				CreracesMod.LOGGER.warn("Failed to load dependency entity for procedure IfMermaid!");
 			return;
 		}
-		if (dependencies.get("x") == null) {
-			if (!dependencies.containsKey("x"))
-				CreracesMod.LOGGER.warn("Failed to load dependency x for procedure IfMermaid!");
-			return;
-		}
-		if (dependencies.get("y") == null) {
-			if (!dependencies.containsKey("y"))
-				CreracesMod.LOGGER.warn("Failed to load dependency y for procedure IfMermaid!");
-			return;
-		}
-		if (dependencies.get("z") == null) {
-			if (!dependencies.containsKey("z"))
-				CreracesMod.LOGGER.warn("Failed to load dependency z for procedure IfMermaid!");
-			return;
-		}
 		if (dependencies.get("world") == null) {
 			if (!dependencies.containsKey("world"))
 				CreracesMod.LOGGER.warn("Failed to load dependency world for procedure IfMermaid!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
-		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
-		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
-		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
 		if ((((entity.getCapability(CreracesModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 				.orElse(new CreracesModVariables.PlayerVariables())).IsMermaid) == 1)) {
-			if ((world.canBlockSeeSky(new BlockPos((int) (x - 1), (int) y, (int) z)))) {
-				if ((!(world.getWorldInfo().isRaining() || world.getWorldInfo().isThundering()))) {
-					if ((!(entity.isInWaterRainOrBubbleColumn()))) {
-						if ((!((new Object() {
+			if ((!(world.getWorldInfo().isRaining() || world.getWorldInfo().isThundering()))) {
+				if ((!(entity.isInWaterRainOrBubbleColumn()))) {
+					if ((!(world.isRemote()))) {
+						if (entity instanceof LivingEntity) {
+							((LivingEntity) entity).removePotionEffect(Effects.SLOW_FALLING);
+						}
+						new Object() {
+							private int ticks = 0;
+							private float waitTicks;
+							private IWorld world;
+							public void start(IWorld world, int waitTicks) {
+								this.waitTicks = waitTicks;
+								MinecraftForge.EVENT_BUS.register(this);
+								this.world = world;
+							}
+
+							@SubscribeEvent
+							public void tick(TickEvent.ServerTickEvent event) {
+								if (event.phase == TickEvent.Phase.END) {
+									this.ticks += 1;
+									if (this.ticks >= this.waitTicks)
+										run();
+								}
+							}
+
+							private void run() {
+								if ((((entity.getCapability(CreracesModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+										.orElse(new CreracesModVariables.PlayerVariables())).AirBubbles) == 10)) {
+									{
+										double _setval = (double) (((entity.getCapability(CreracesModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+												.orElse(new CreracesModVariables.PlayerVariables())).AirBubbles) - 1);
+										entity.getCapability(CreracesModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+											capability.AirBubbles = _setval;
+											capability.syncPlayerVariables(entity);
+										});
+									}
+								}
+								new Object() {
+									private int ticks = 0;
+									private float waitTicks;
+									private IWorld world;
+									public void start(IWorld world, int waitTicks) {
+										this.waitTicks = waitTicks;
+										MinecraftForge.EVENT_BUS.register(this);
+										this.world = world;
+									}
+
+									@SubscribeEvent
+									public void tick(TickEvent.ServerTickEvent event) {
+										if (event.phase == TickEvent.Phase.END) {
+											this.ticks += 1;
+											if (this.ticks >= this.waitTicks)
+												run();
+										}
+									}
+
+									private void run() {
+										if ((((entity.getCapability(CreracesModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+												.orElse(new CreracesModVariables.PlayerVariables())).AirBubbles) == 9)) {
+											{
+												double _setval = (double) (((entity
+														.getCapability(CreracesModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+														.orElse(new CreracesModVariables.PlayerVariables())).AirBubbles) - 1);
+												entity.getCapability(CreracesModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+													capability.AirBubbles = _setval;
+													capability.syncPlayerVariables(entity);
+												});
+											}
+										}
+										new Object() {
+											private int ticks = 0;
+											private float waitTicks;
+											private IWorld world;
+											public void start(IWorld world, int waitTicks) {
+												this.waitTicks = waitTicks;
+												MinecraftForge.EVENT_BUS.register(this);
+												this.world = world;
+											}
+
+											@SubscribeEvent
+											public void tick(TickEvent.ServerTickEvent event) {
+												if (event.phase == TickEvent.Phase.END) {
+													this.ticks += 1;
+													if (this.ticks >= this.waitTicks)
+														run();
+												}
+											}
+
+											private void run() {
+												if ((((entity.getCapability(CreracesModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+														.orElse(new CreracesModVariables.PlayerVariables())).AirBubbles) == 8)) {
+													{
+														double _setval = (double) (((entity
+																.getCapability(CreracesModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+																.orElse(new CreracesModVariables.PlayerVariables())).AirBubbles) - 1);
+														entity.getCapability(CreracesModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+																.ifPresent(capability -> {
+																	capability.AirBubbles = _setval;
+																	capability.syncPlayerVariables(entity);
+																});
+													}
+												}
+												new Object() {
+													private int ticks = 0;
+													private float waitTicks;
+													private IWorld world;
+													public void start(IWorld world, int waitTicks) {
+														this.waitTicks = waitTicks;
+														MinecraftForge.EVENT_BUS.register(this);
+														this.world = world;
+													}
+
+													@SubscribeEvent
+													public void tick(TickEvent.ServerTickEvent event) {
+														if (event.phase == TickEvent.Phase.END) {
+															this.ticks += 1;
+															if (this.ticks >= this.waitTicks)
+																run();
+														}
+													}
+
+													private void run() {
+														if ((((entity.getCapability(CreracesModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+																.orElse(new CreracesModVariables.PlayerVariables())).AirBubbles) == 7)) {
+															{
+																double _setval = (double) (((entity
+																		.getCapability(CreracesModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+																		.orElse(new CreracesModVariables.PlayerVariables())).AirBubbles) - 1);
+																entity.getCapability(CreracesModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+																		.ifPresent(capability -> {
+																			capability.AirBubbles = _setval;
+																			capability.syncPlayerVariables(entity);
+																		});
+															}
+														}
+														new Object() {
+															private int ticks = 0;
+															private float waitTicks;
+															private IWorld world;
+															public void start(IWorld world, int waitTicks) {
+																this.waitTicks = waitTicks;
+																MinecraftForge.EVENT_BUS.register(this);
+																this.world = world;
+															}
+
+															@SubscribeEvent
+															public void tick(TickEvent.ServerTickEvent event) {
+																if (event.phase == TickEvent.Phase.END) {
+																	this.ticks += 1;
+																	if (this.ticks >= this.waitTicks)
+																		run();
+																}
+															}
+
+															private void run() {
+																if ((((entity.getCapability(CreracesModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+																		.orElse(new CreracesModVariables.PlayerVariables())).AirBubbles) == 6)) {
+																	{
+																		double _setval = (double) (((entity
+																				.getCapability(CreracesModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+																				.orElse(new CreracesModVariables.PlayerVariables())).AirBubbles) - 1);
+																		entity.getCapability(CreracesModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+																				.ifPresent(capability -> {
+																					capability.AirBubbles = _setval;
+																					capability.syncPlayerVariables(entity);
+																				});
+																	}
+																}
+																new Object() {
+																	private int ticks = 0;
+																	private float waitTicks;
+																	private IWorld world;
+																	public void start(IWorld world, int waitTicks) {
+																		this.waitTicks = waitTicks;
+																		MinecraftForge.EVENT_BUS.register(this);
+																		this.world = world;
+																	}
+
+																	@SubscribeEvent
+																	public void tick(TickEvent.ServerTickEvent event) {
+																		if (event.phase == TickEvent.Phase.END) {
+																			this.ticks += 1;
+																			if (this.ticks >= this.waitTicks)
+																				run();
+																		}
+																	}
+
+																	private void run() {
+																		if ((((entity
+																				.getCapability(CreracesModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+																				.orElse(new CreracesModVariables.PlayerVariables())).AirBubbles) == 5)) {
+																			{
+																				double _setval = (double) (((entity.getCapability(
+																						CreracesModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+																						.orElse(new CreracesModVariables.PlayerVariables())).AirBubbles)
+																						- 1);
+																				entity.getCapability(CreracesModVariables.PLAYER_VARIABLES_CAPABILITY,
+																						null).ifPresent(capability -> {
+																							capability.AirBubbles = _setval;
+																							capability.syncPlayerVariables(entity);
+																						});
+																			}
+																		}
+																		new Object() {
+																			private int ticks = 0;
+																			private float waitTicks;
+																			private IWorld world;
+																			public void start(IWorld world, int waitTicks) {
+																				this.waitTicks = waitTicks;
+																				MinecraftForge.EVENT_BUS.register(this);
+																				this.world = world;
+																			}
+
+																			@SubscribeEvent
+																			public void tick(TickEvent.ServerTickEvent event) {
+																				if (event.phase == TickEvent.Phase.END) {
+																					this.ticks += 1;
+																					if (this.ticks >= this.waitTicks)
+																						run();
+																				}
+																			}
+
+																			private void run() {
+																				if ((((entity.getCapability(
+																						CreracesModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+																						.orElse(new CreracesModVariables.PlayerVariables())).AirBubbles) == 4)) {
+																					{
+																						double _setval = (double) (((entity.getCapability(
+																								CreracesModVariables.PLAYER_VARIABLES_CAPABILITY,
+																								null)
+																								.orElse(new CreracesModVariables.PlayerVariables())).AirBubbles)
+																								- 1);
+																						entity.getCapability(
+																								CreracesModVariables.PLAYER_VARIABLES_CAPABILITY,
+																								null).ifPresent(capability -> {
+																									capability.AirBubbles = _setval;
+																									capability.syncPlayerVariables(entity);
+																								});
+																					}
+																				}
+																				new Object() {
+																					private int ticks = 0;
+																					private float waitTicks;
+																					private IWorld world;
+																					public void start(IWorld world, int waitTicks) {
+																						this.waitTicks = waitTicks;
+																						MinecraftForge.EVENT_BUS.register(this);
+																						this.world = world;
+																					}
+
+																					@SubscribeEvent
+																					public void tick(TickEvent.ServerTickEvent event) {
+																						if (event.phase == TickEvent.Phase.END) {
+																							this.ticks += 1;
+																							if (this.ticks >= this.waitTicks)
+																								run();
+																						}
+																					}
+
+																					private void run() {
+																						if ((((entity.getCapability(
+																								CreracesModVariables.PLAYER_VARIABLES_CAPABILITY,
+																								null)
+																								.orElse(new CreracesModVariables.PlayerVariables())).AirBubbles) == 3)) {
+																							{
+																								double _setval = (double) (((entity.getCapability(
+																										CreracesModVariables.PLAYER_VARIABLES_CAPABILITY,
+																										null)
+																										.orElse(new CreracesModVariables.PlayerVariables())).AirBubbles)
+																										- 1);
+																								entity.getCapability(
+																										CreracesModVariables.PLAYER_VARIABLES_CAPABILITY,
+																										null).ifPresent(capability -> {
+																											capability.AirBubbles = _setval;
+																											capability.syncPlayerVariables(entity);
+																										});
+																							}
+																						}
+																						new Object() {
+																							private int ticks = 0;
+																							private float waitTicks;
+																							private IWorld world;
+																							public void start(IWorld world, int waitTicks) {
+																								this.waitTicks = waitTicks;
+																								MinecraftForge.EVENT_BUS.register(this);
+																								this.world = world;
+																							}
+
+																							@SubscribeEvent
+																							public void tick(TickEvent.ServerTickEvent event) {
+																								if (event.phase == TickEvent.Phase.END) {
+																									this.ticks += 1;
+																									if (this.ticks >= this.waitTicks)
+																										run();
+																								}
+																							}
+
+																							private void run() {
+																								if ((((entity.getCapability(
+																										CreracesModVariables.PLAYER_VARIABLES_CAPABILITY,
+																										null)
+																										.orElse(new CreracesModVariables.PlayerVariables())).AirBubbles) == 2)) {
+																									{
+																										double _setval = (double) (((entity
+																												.getCapability(
+																														CreracesModVariables.PLAYER_VARIABLES_CAPABILITY,
+																														null)
+																												.orElse(new CreracesModVariables.PlayerVariables())).AirBubbles)
+																												- 1);
+																										entity.getCapability(
+																												CreracesModVariables.PLAYER_VARIABLES_CAPABILITY,
+																												null).ifPresent(capability -> {
+																													capability.AirBubbles = _setval;
+																													capability.syncPlayerVariables(
+																															entity);
+																												});
+																									}
+																								}
+																								new Object() {
+																									private int ticks = 0;
+																									private float waitTicks;
+																									private IWorld world;
+																									public void start(IWorld world, int waitTicks) {
+																										this.waitTicks = waitTicks;
+																										MinecraftForge.EVENT_BUS.register(this);
+																										this.world = world;
+																									}
+
+																									@SubscribeEvent
+																									public void tick(
+																											TickEvent.ServerTickEvent event) {
+																										if (event.phase == TickEvent.Phase.END) {
+																											this.ticks += 1;
+																											if (this.ticks >= this.waitTicks)
+																												run();
+																										}
+																									}
+
+																									private void run() {
+																										if ((((entity.getCapability(
+																												CreracesModVariables.PLAYER_VARIABLES_CAPABILITY,
+																												null)
+																												.orElse(new CreracesModVariables.PlayerVariables())).AirBubbles) == 1)) {
+																											{
+																												double _setval = (double) (((entity
+																														.getCapability(
+																																CreracesModVariables.PLAYER_VARIABLES_CAPABILITY,
+																																null)
+																														.orElse(new CreracesModVariables.PlayerVariables())).AirBubbles)
+																														- 1);
+																												entity.getCapability(
+																														CreracesModVariables.PLAYER_VARIABLES_CAPABILITY,
+																														null)
+																														.ifPresent(capability -> {
+																															capability.AirBubbles = _setval;
+																															capability
+																																	.syncPlayerVariables(
+																																			entity);
+																														});
+																											}
+																										}
+																										new Object() {
+																											private int ticks = 0;
+																											private float waitTicks;
+																											private IWorld world;
+																											public void start(IWorld world,
+																													int waitTicks) {
+																												this.waitTicks = waitTicks;
+																												MinecraftForge.EVENT_BUS
+																														.register(this);
+																												this.world = world;
+																											}
+
+																											@SubscribeEvent
+																											public void tick(
+																													TickEvent.ServerTickEvent event) {
+																												if (event.phase == TickEvent.Phase.END) {
+																													this.ticks += 1;
+																													if (this.ticks >= this.waitTicks)
+																														run();
+																												}
+																											}
+
+																											private void run() {
+																												if ((((entity.getCapability(
+																														CreracesModVariables.PLAYER_VARIABLES_CAPABILITY,
+																														null)
+																														.orElse(new CreracesModVariables.PlayerVariables())).AirBubbles) == 0)) {
+																													{
+																														double _setval = (double) (((entity
+																																.getCapability(
+																																		CreracesModVariables.PLAYER_VARIABLES_CAPABILITY,
+																																		null)
+																																.orElse(new CreracesModVariables.PlayerVariables())).AirBubbles)
+																																- 1);
+																														entity.getCapability(
+																																CreracesModVariables.PLAYER_VARIABLES_CAPABILITY,
+																																null).ifPresent(
+																																		capability -> {
+																																			capability.AirBubbles = _setval;
+																																			capability
+																																					.syncPlayerVariables(
+																																							entity);
+																																		});
+																													}
+																												}
+																												MinecraftForge.EVENT_BUS
+																														.unregister(this);
+																											}
+																										}.start(world, (int) 40);
+																										MinecraftForge.EVENT_BUS.unregister(this);
+																									}
+																								}.start(world, (int) 40);
+																								MinecraftForge.EVENT_BUS.unregister(this);
+																							}
+																						}.start(world, (int) 40);
+																						MinecraftForge.EVENT_BUS.unregister(this);
+																					}
+																				}.start(world, (int) 40);
+																				MinecraftForge.EVENT_BUS.unregister(this);
+																			}
+																		}.start(world, (int) 40);
+																		MinecraftForge.EVENT_BUS.unregister(this);
+																	}
+																}.start(world, (int) 40);
+																MinecraftForge.EVENT_BUS.unregister(this);
+															}
+														}.start(world, (int) 40);
+														MinecraftForge.EVENT_BUS.unregister(this);
+													}
+												}.start(world, (int) 40);
+												MinecraftForge.EVENT_BUS.unregister(this);
+											}
+										}.start(world, (int) 40);
+										MinecraftForge.EVENT_BUS.unregister(this);
+									}
+								}.start(world, (int) 40);
+								MinecraftForge.EVENT_BUS.unregister(this);
+							}
+						}.start(world, (int) 40);
+					}
+					if ((((entity.getCapability(CreracesModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+							.orElse(new CreracesModVariables.PlayerVariables())).AirBubbles) <= (-1))) {
+						if ((!(new Object() {
 							boolean check(Entity _entity) {
 								if (_entity instanceof LivingEntity) {
 									Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
@@ -74,37 +496,25 @@ public class IfMermaidProcedure extends CreracesModElements.ModElement {
 								}
 								return false;
 							}
-						}.check(entity)) || (new Object() {
-							boolean check(Entity _entity) {
-								if (_entity instanceof LivingEntity) {
-									Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
-									for (EffectInstance effect : effects) {
-										if (effect.getPotion() == Effects.POISON)
-											return true;
-									}
-								}
-								return false;
-							}
-						}.check(entity))))) {
-							if ((!(world.isRemote()))) {
-								if (entity instanceof LivingEntity)
-									((LivingEntity) entity)
-											.addPotionEffect(new EffectInstance(Effects.WEAKNESS, (int) 90, (int) 3, (false), (false)));
-								if (entity instanceof LivingEntity)
-									((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.POISON, (int) 90, (int) 1, (false), (false)));
-							}
+						}.check(entity)))) {
+							if (entity instanceof LivingEntity)
+								((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.WEAKNESS, (int) 30, (int) 1, (false), (false)));
+							entity.attackEntityFrom(DamageSource.DROWN, (float) 2);
 						}
 					}
 				}
-				if ((world.getWorldInfo().isRaining() || world.getWorldInfo().isThundering())) {
-					if ((!(world.isRemote()))) {
-						if (entity instanceof LivingEntity)
-							((LivingEntity) entity).clearActivePotions();
-					}
+			}
+			if ((entity.isInWaterRainOrBubbleColumn())) {
+				if (entity instanceof LivingEntity)
+					((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.SLOW_FALLING, (int) 1000000, (int) 0, (false), (false)));
+				{
+					double _setval = (double) 10;
+					entity.getCapability(CreracesModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.AirBubbles = _setval;
+						capability.syncPlayerVariables(entity);
+					});
 				}
 			}
-			if (entity instanceof LivingEntity)
-				((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.DOLPHINS_GRACE, (int) 1000000, (int) 0, (false), (false)));
 			if (entity instanceof LivingEntity)
 				((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.CONDUIT_POWER, (int) 1000000, (int) 0, (false), (false)));
 			if (entity instanceof LivingEntity)

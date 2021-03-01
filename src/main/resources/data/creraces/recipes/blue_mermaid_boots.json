@@ -1,0 +1,27 @@
+{
+  "group": "creraces",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " 1 ",
+    " 4 ",
+    "6 8"
+  ],
+  "key": {
+    "1": {
+      "item": "minecraft:diamond_block"
+    },
+    "4": {
+      "item": "minecraft:diamond_boots"
+    },
+    "6": {
+      "item": "minecraft:diamond"
+    },
+    "8": {
+      "item": "minecraft:diamond"
+    }
+  },
+  "result": {
+    "item": "creraces:blue_mermaid_armor_boots",
+    "count": 1
+  }
+}

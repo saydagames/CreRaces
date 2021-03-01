@@ -1,0 +1,33 @@
+{
+  "group": "creraces",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0 2",
+    "345",
+    " 7 "
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:quartz"
+    },
+    "2": {
+      "item": "minecraft:quartz"
+    },
+    "3": {
+      "item": "minecraft:string"
+    },
+    "4": {
+      "item": "minecraft:piston"
+    },
+    "5": {
+      "item": "minecraft:string"
+    },
+    "7": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "creraces:cloud_staff",
+    "count": 1
+  }
+}

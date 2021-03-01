@@ -1,0 +1,58 @@
+{
+  "_fv": 15,
+  "_type": "armor",
+  "definition": {
+    "enableHelmet": true,
+    "textureHelmet": "blue_mermaid_head",
+    "enableBody": true,
+    "textureBody": "blue_mermaid_body",
+    "enableLeggings": true,
+    "textureLeggings": "blue_mermaid_leggings",
+    "enableBoots": true,
+    "textureBoots": "blue_mermaid_boots",
+    "creativeTab": {
+      "value": "COMBAT"
+    },
+    "armorTextureFile": "blue_mermaid",
+    "helmetName": "Blue Mermaid Helmet",
+    "bodyName": "Blue Mermaid Chestplate",
+    "leggingsName": "Blue Mermaid Leggings",
+    "bootsName": "Blue Mermaid Boots",
+    "helmetSpecialInfo": [],
+    "bodySpecialInfo": [],
+    "leggingsSpecialInfo": [],
+    "bootsSpecialInfo": [],
+    "helmetModelName": "Default",
+    "helmetModelPart": "Helmet",
+    "helmetModelTexture": "From armor",
+    "bodyModelName": "Default",
+    "bodyModelPart": "Body",
+    "armsModelPartL": "Arms L",
+    "armsModelPartR": "Arms R",
+    "bodyModelTexture": "From armor",
+    "leggingsModelName": "Default",
+    "leggingsModelPartL": "Leggings L",
+    "leggingsModelPartR": "Leggings R",
+    "leggingsModelTexture": "From armor",
+    "bootsModelName": "Default",
+    "bootsModelPartL": "Boots L",
+    "bootsModelPartR": "Boots R",
+    "bootsModelTexture": "From armor",
+    "maxDamage": 37,
+    "damageValueHelmet": 3,
+    "damageValueBody": 8,
+    "damageValueLeggings": 6,
+    "damageValueBoots": 3,
+    "enchantability": 15,
+    "toughness": 3.0,
+    "knockbackResistance": 0.1,
+    "equipSound": {
+      "value": ""
+    },
+    "repairItems": [
+      {
+        "value": "Items.DIAMOND"
+      }
+    ]
+  }
+}

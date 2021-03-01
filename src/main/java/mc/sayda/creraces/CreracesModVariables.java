@@ -67,34 +67,40 @@ public class CreracesModVariables {
 		@Override
 		public INBT writeNBT(Capability<PlayerVariables> capability, PlayerVariables instance, Direction side) {
 			CompoundNBT nbt = new CompoundNBT();
-			nbt.putDouble("IsUndead", instance.IsUndead);
 			nbt.putDouble("IsFlamekin", instance.IsFlamekin);
 			nbt.putDouble("IsDwarf", instance.IsDwarf);
+			nbt.putDouble("IsUndead", instance.IsUndead);
 			nbt.putDouble("IsMermaid", instance.IsMermaid);
 			nbt.putDouble("IsRadix", instance.IsRadix);
 			nbt.putDouble("IsHarpie", instance.IsHarpie);
+			nbt.putDouble("AirBubbles", instance.AirBubbles);
+			nbt.putDouble("UndeadSummon", instance.UndeadSummon);
 			return nbt;
 		}
 
 		@Override
 		public void readNBT(Capability<PlayerVariables> capability, PlayerVariables instance, Direction side, INBT inbt) {
 			CompoundNBT nbt = (CompoundNBT) inbt;
-			instance.IsUndead = nbt.getDouble("IsUndead");
 			instance.IsFlamekin = nbt.getDouble("IsFlamekin");
 			instance.IsDwarf = nbt.getDouble("IsDwarf");
+			instance.IsUndead = nbt.getDouble("IsUndead");
 			instance.IsMermaid = nbt.getDouble("IsMermaid");
 			instance.IsRadix = nbt.getDouble("IsRadix");
 			instance.IsHarpie = nbt.getDouble("IsHarpie");
+			instance.AirBubbles = nbt.getDouble("AirBubbles");
+			instance.UndeadSummon = nbt.getDouble("UndeadSummon");
 		}
 	}
 
 	public static class PlayerVariables {
-		public double IsUndead = 0;
-		public double IsFlamekin = 0;
-		public double IsDwarf = 0;
-		public double IsMermaid = 0;
-		public double IsRadix = 0;
-		public double IsHarpie = 0;
+		public double IsFlamekin = 0.0;
+		public double IsDwarf = 0.0;
+		public double IsUndead = 0.0;
+		public double IsMermaid = 0.0;
+		public double IsRadix = 0.0;
+		public double IsHarpie = 0.0;
+		public double AirBubbles = 10.0;
+		public double UndeadSummon = 0;
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayerEntity)
 				CreracesMod.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> (ServerPlayerEntity) entity),
@@ -129,12 +135,14 @@ public class CreracesModVariables {
 					.orElse(new PlayerVariables()));
 			PlayerVariables clone = ((PlayerVariables) event.getEntity().getCapability(PLAYER_VARIABLES_CAPABILITY, null)
 					.orElse(new PlayerVariables()));
-			clone.IsUndead = original.IsUndead;
 			clone.IsFlamekin = original.IsFlamekin;
 			clone.IsDwarf = original.IsDwarf;
+			clone.IsUndead = original.IsUndead;
 			clone.IsMermaid = original.IsMermaid;
 			clone.IsRadix = original.IsRadix;
 			clone.IsHarpie = original.IsHarpie;
+			clone.AirBubbles = original.AirBubbles;
+			clone.UndeadSummon = original.UndeadSummon;
 		}
 	}
 	public static class PlayerVariablesSyncMessage {
@@ -158,12 +166,14 @@ public class CreracesModVariables {
 				if (!context.getDirection().getReceptionSide().isServer()) {
 					PlayerVariables variables = ((PlayerVariables) Minecraft.getInstance().player.getCapability(PLAYER_VARIABLES_CAPABILITY, null)
 							.orElse(new PlayerVariables()));
-					variables.IsUndead = message.data.IsUndead;
 					variables.IsFlamekin = message.data.IsFlamekin;
 					variables.IsDwarf = message.data.IsDwarf;
+					variables.IsUndead = message.data.IsUndead;
 					variables.IsMermaid = message.data.IsMermaid;
 					variables.IsRadix = message.data.IsRadix;
 					variables.IsHarpie = message.data.IsHarpie;
+					variables.AirBubbles = message.data.AirBubbles;
+					variables.UndeadSummon = message.data.UndeadSummon;
 				}
 			});
 			context.setPacketHandled(true);

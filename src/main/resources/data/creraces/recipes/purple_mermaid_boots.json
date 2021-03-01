@@ -1,0 +1,27 @@
+{
+  "group": "creraces",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " 1 ",
+    " 4 ",
+    "6 8"
+  ],
+  "key": {
+    "1": {
+      "item": "minecraft:coal_block"
+    },
+    "4": {
+      "item": "minecraft:leather_boots"
+    },
+    "6": {
+      "item": "minecraft:leather"
+    },
+    "8": {
+      "item": "minecraft:leather"
+    }
+  },
+  "result": {
+    "item": "creraces:purple_mermaid_armor_boots",
+    "count": 1
+  }
+}

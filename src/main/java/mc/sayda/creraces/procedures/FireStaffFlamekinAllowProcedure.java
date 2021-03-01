@@ -20,7 +20,7 @@ import java.util.HashMap;
 @CreracesModElements.ModElement.Tag
 public class FireStaffFlamekinAllowProcedure extends CreracesModElements.ModElement {
 	public FireStaffFlamekinAllowProcedure(CreracesModElements instance) {
-		super(instance, 13);
+		super(instance, 31);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 

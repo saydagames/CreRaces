@@ -1,0 +1,26 @@
+{
+  "group": "creraces",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    " 4 "
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:sunflower"
+    },
+    "1": {
+      "item": "minecraft:golden_chestplate"
+    },
+    "2": {
+      "item": "minecraft:sunflower"
+    },
+    "4": {
+      "item": "minecraft:gold_block"
+    }
+  },
+  "result": {
+    "item": "creraces:yellow_mermaid_armor_chestplate",
+    "count": 1
+  }
+}

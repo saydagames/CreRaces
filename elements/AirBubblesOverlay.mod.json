@@ -1,0 +1,143 @@
+{
+  "_fv": 15,
+  "_type": "overlay",
+  "definition": {
+    "priority": "NORMAL",
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "bubble.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "AirBubble1"
+          },
+          "name": "bubble.png",
+          "x": 295,
+          "y": 207
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "bubble.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "AirBubble2"
+          },
+          "name": "bubble.png",
+          "x": 287,
+          "y": 207
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "bubble.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "AirBubble3"
+          },
+          "name": "bubble.png",
+          "x": 279,
+          "y": 207
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "bubble.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "AirBubble4"
+          },
+          "name": "bubble.png",
+          "x": 271,
+          "y": 207
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "bubble.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "AirBubble5"
+          },
+          "name": "bubble.png",
+          "x": 263,
+          "y": 207
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "bubble.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "AirBubble6"
+          },
+          "name": "bubble.png",
+          "x": 255,
+          "y": 207
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "bubble.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "AirBubble7"
+          },
+          "name": "bubble.png",
+          "x": 247,
+          "y": 207
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "bubble.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "AirBubble8"
+          },
+          "name": "bubble.png",
+          "x": 239,
+          "y": 207
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "bubble.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "AirBubble9"
+          },
+          "name": "bubble.png",
+          "x": 231,
+          "y": 207
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "bubble.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "AirBubble10"
+          },
+          "name": "bubble.png",
+          "x": 223,
+          "y": 207
+        }
+      }
+    ],
+    "baseTexture": "",
+    "displayCondition": {
+      "name": "AirBubblesOverlayDisplay"
+    }
+  }
+}

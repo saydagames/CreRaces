@@ -1,0 +1,166 @@
+{
+  "_fv": 15,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 176,
+    "height": 166,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "button",
+        "data": {
+          "text": "Crawler",
+          "onClick": {
+            "name": "Melee2"
+          },
+          "width": 55,
+          "height": 20,
+          "name": "Crawler",
+          "x": 231,
+          "y": 116
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Ghoul",
+          "onClick": {
+            "name": "Melee1"
+          },
+          "width": 55,
+          "height": 20,
+          "name": "Ghoul",
+          "x": 231,
+          "y": 89
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Dominator",
+          "onClick": {
+            "name": "Ranged2"
+          },
+          "width": 55,
+          "height": 20,
+          "name": "Dominator",
+          "x": 141,
+          "y": 116
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Select your Summon",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Select your Summon",
+          "x": 168,
+          "y": 44
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Wanderer",
+          "onClick": {
+            "name": "Ranged1"
+          },
+          "width": 55,
+          "height": 20,
+          "name": "Wanderer",
+          "x": 141,
+          "y": 89
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Ranged",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Ranged",
+          "x": 141,
+          "y": 71
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Melee",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Melee",
+          "x": 231,
+          "y": 71
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Empty",
+          "onClick": {
+            "name": "Ranged3"
+          },
+          "width": 55,
+          "height": 20,
+          "name": "Empty",
+          "x": 141,
+          "y": 143
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Empty",
+          "onClick": {
+            "name": "Ranged4"
+          },
+          "width": 55,
+          "height": 20,
+          "name": "Empty",
+          "x": 141,
+          "y": 170
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Reaper",
+          "onClick": {
+            "name": "Melee3"
+          },
+          "width": 55,
+          "height": 20,
+          "name": "Reaper",
+          "x": 231,
+          "y": 143
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Empty",
+          "onClick": {
+            "name": "Melee4"
+          },
+          "width": 55,
+          "height": 20,
+          "name": "Empty",
+          "x": 231,
+          "y": 170
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "group": "creraces",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    " 4 "
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:vine"
+    },
+    "1": {
+      "item": "minecraft:iron_chestplate"
+    },
+    "2": {
+      "item": "minecraft:vine"
+    },
+    "4": {
+      "item": "minecraft:iron_block"
+    }
+  },
+  "result": {
+    "item": "creraces:green_mermaid_armor_chestplate",
+    "count": 1
+  }
+}

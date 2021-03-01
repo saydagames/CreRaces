@@ -77,6 +77,13 @@ public class MakeResetProcedure extends CreracesModElements.ModElement {
 					capability.syncPlayerVariables(entity);
 				});
 			}
+			{
+				Entity _ent = entity;
+				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
+					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
+							"attribute @p minecraft:generic.max_health base set 20");
+				}
+			}
 			if (entity instanceof LivingEntity)
 				((LivingEntity) entity).clearActivePotions();
 			{

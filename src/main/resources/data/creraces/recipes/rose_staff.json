@@ -1,0 +1,30 @@
+{
+  "group": "creraces",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    " 4 ",
+    " 7 "
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:poppy"
+    },
+    "1": {
+      "item": "minecraft:cactus"
+    },
+    "2": {
+      "item": "minecraft:poppy"
+    },
+    "4": {
+      "item": "minecraft:poppy"
+    },
+    "7": {
+      "item": "minecraft:poppy"
+    }
+  },
+  "result": {
+    "item": "creraces:rose_staff",
+    "count": 1
+  }
+}

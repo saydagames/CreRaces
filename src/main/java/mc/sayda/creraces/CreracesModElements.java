@@ -46,6 +46,10 @@ public class CreracesModElements {
 	public final List<Supplier<Enchantment>> enchantments = new ArrayList<>();
 	public static Map<ResourceLocation, net.minecraft.util.SoundEvent> sounds = new HashMap<>();
 	public CreracesModElements() {
+		sounds.put(new ResourceLocation("creraces", "soul-reaper-laugh"),
+				new net.minecraft.util.SoundEvent(new ResourceLocation("creraces", "soul-reaper-laugh")));
+		sounds.put(new ResourceLocation("creraces", "magical-sound"),
+				new net.minecraft.util.SoundEvent(new ResourceLocation("creraces", "magical-sound")));
 		try {
 			ModFileScanData modFileInfo = ModList.get().getModFileById("creraces").getFile().getScanResult();
 			Set<ModFileScanData.AnnotationData> annotations = modFileInfo.getAnnotations();

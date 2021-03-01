@@ -33,7 +33,7 @@ public class IfDwarfProcedure extends CreracesModElements.ModElement {
 		if ((((entity.getCapability(CreracesModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 				.orElse(new CreracesModVariables.PlayerVariables())).IsDwarf) == 1)) {
 			if (entity instanceof LivingEntity)
-				((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.RESISTANCE, (int) 1000000, (int) 1, (false), (false)));
+				((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.RESISTANCE, (int) 1000000, (int) 0, (false), (false)));
 			if (entity instanceof LivingEntity)
 				((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.ABSORPTION, (int) 1000000, (int) 4, (false), (false)));
 		}

@@ -9,10 +9,14 @@ import net.minecraft.world.IWorld;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.potion.Effects;
 import net.minecraft.potion.EffectInstance;
+import net.minecraft.item.ItemStack;
+import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.Entity;
 import net.minecraft.block.Blocks;
 
+import mc.sayda.creraces.item.SpecialRaceArmorArmorItem;
+import mc.sayda.creraces.item.PurpleMermaidArmorArmorItem;
 import mc.sayda.creraces.CreracesModVariables;
 import mc.sayda.creraces.CreracesModElements;
 import mc.sayda.creraces.CreracesMod;
@@ -60,7 +64,13 @@ public class IfUndeadProcedure extends CreracesModElements.ModElement {
 		IWorld world = (IWorld) dependencies.get("world");
 		if ((((entity.getCapability(CreracesModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 				.orElse(new CreracesModVariables.PlayerVariables())).IsUndead) == 1)) {
-			if ((world.canBlockSeeSky(new BlockPos((int) (x - 1), (int) y, (int) z)))) {
+			if (((world.canBlockSeeSky(new BlockPos((int) (x - 1), (int) y, (int) z))) && (!((((entity instanceof LivingEntity)
+					? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.fromSlotTypeAndIndex(EquipmentSlotType.Group.ARMOR, (int) 3))
+					: ItemStack.EMPTY).getItem() == new ItemStack(SpecialRaceArmorArmorItem.helmet, (int) (1)).getItem())
+					&& (((entity instanceof LivingEntity)
+							? ((LivingEntity) entity)
+									.getItemStackFromSlot(EquipmentSlotType.fromSlotTypeAndIndex(EquipmentSlotType.Group.ARMOR, (int) 3))
+							: ItemStack.EMPTY).getItem() == new ItemStack(PurpleMermaidArmorArmorItem.helmet, (int) (1)).getItem()))))) {
 				if ((((world instanceof World) ? ((World) world).isDaytime() : false)
 						&& (!(world.getWorldInfo().isRaining() || world.getWorldInfo().isThundering())))) {
 					if ((!(((((world.getBlockState(new BlockPos((int) (x - 1), (int) (y + 1), (int) z))).getBlock() == Blocks.WATER.getDefaultState()
@@ -89,7 +99,7 @@ public class IfUndeadProcedure extends CreracesModElements.ModElement {
 				}
 			}
 			if (entity instanceof LivingEntity)
-				((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.STRENGTH, (int) 1000000, (int) 0, (false), (false)));
+				((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.SATURATION, (int) 1000000, (int) 0, (false), (false)));
 			if (entity instanceof LivingEntity)
 				((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.NIGHT_VISION, (int) 1000000, (int) 0, (false), (false)));
 		}

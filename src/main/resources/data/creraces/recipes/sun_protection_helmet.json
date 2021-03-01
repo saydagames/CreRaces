@@ -1,0 +1,36 @@
+{
+  "group": "creraces",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    " 7 "
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:iron_ingot"
+    },
+    "1": {
+      "item": "minecraft:netherite_block"
+    },
+    "2": {
+      "item": "minecraft:iron_ingot"
+    },
+    "3": {
+      "item": "minecraft:bone"
+    },
+    "4": {
+      "item": "minecraft:iron_helmet"
+    },
+    "5": {
+      "item": "minecraft:bone"
+    },
+    "7": {
+      "item": "minecraft:diamond_block"
+    }
+  },
+  "result": {
+    "item": "creraces:purple_mermaid_armor_helmet",
+    "count": 1
+  }
+}

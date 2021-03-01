@@ -1,0 +1,26 @@
+{
+  "group": "creraces",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    " 4 "
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:leather"
+    },
+    "1": {
+      "item": "minecraft:leather_chestplate"
+    },
+    "2": {
+      "item": "minecraft:leather"
+    },
+    "4": {
+      "item": "minecraft:coal_block"
+    }
+  },
+  "result": {
+    "item": "creraces:purple_mermaid_armor_chestplate",
+    "count": 1
+  }
+}

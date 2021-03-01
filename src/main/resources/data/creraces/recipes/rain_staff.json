@@ -1,0 +1,33 @@
+{
+  "group": "creraces",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0 2",
+    "345",
+    " 7 "
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:ice"
+    },
+    "2": {
+      "item": "minecraft:ice"
+    },
+    "3": {
+      "item": "minecraft:potion"
+    },
+    "4": {
+      "item": "minecraft:water_bucket"
+    },
+    "5": {
+      "item": "minecraft:potion"
+    },
+    "7": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "creraces:rain_staff",
+    "count": 1
+  }
+}

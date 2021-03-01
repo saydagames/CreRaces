@@ -1,0 +1,40 @@
+{
+  "_fv": 15,
+  "_type": "tool",
+  "definition": {
+    "renderType": 0,
+    "texture": "rose",
+    "customModelName": "Normal",
+    "name": "Rose Staff",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "TOOLS"
+    },
+    "toolType": "Shears",
+    "harvestLevel": 0,
+    "efficiency": 4.0,
+    "attackSpeed": 1.0,
+    "enchantability": 10,
+    "damageVsEntity": 0.0,
+    "usageCount": 480,
+    "blocksAffected": [],
+    "hasGlow": false,
+    "repairItems": [
+      {
+        "value": "Blocks.RED_FLOWER#0"
+      },
+      {
+        "value": "Blocks.VINE"
+      }
+    ],
+    "immuneToFire": false,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "onRightClickedOnBlock": {
+      "name": "RoseStaffBoneMeal"
+    },
+    "onItemInInventoryTick": {
+      "name": "RoseStaffRadixAllow"
+    }
+  }
+}

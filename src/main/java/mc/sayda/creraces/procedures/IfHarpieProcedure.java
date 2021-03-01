@@ -32,14 +32,19 @@ public class IfHarpieProcedure extends CreracesModElements.ModElement {
 		Entity entity = (Entity) dependencies.get("entity");
 		if ((((entity.getCapability(CreracesModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 				.orElse(new CreracesModVariables.PlayerVariables())).IsHarpie) == 1)) {
+			{
+				Entity _ent = entity;
+				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
+					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
+							"attribute @p minecraft:generic.max_health base set 16");
+				}
+			}
 			if (entity instanceof LivingEntity)
 				((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.SLOW_FALLING, (int) 1000000, (int) 0, (false), (false)));
 			if (entity instanceof LivingEntity)
 				((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.SPEED, (int) 1000000, (int) 1, (false), (false)));
 			if (entity instanceof LivingEntity)
-				((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.LUCK, (int) 1000000, (int) 1, (false), (false)));
-			if (entity instanceof LivingEntity)
-				((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.JUMP_BOOST, (int) 1000000, (int) 0, (false), (false)));
+				((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.JUMP_BOOST, (int) 1000000, (int) 2, (false), (false)));
 		}
 	}
 

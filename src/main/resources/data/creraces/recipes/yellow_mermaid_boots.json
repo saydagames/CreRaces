@@ -1,0 +1,27 @@
+{
+  "group": "creraces",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " 1 ",
+    " 4 ",
+    "6 8"
+  ],
+  "key": {
+    "1": {
+      "item": "minecraft:gold_block"
+    },
+    "4": {
+      "item": "minecraft:golden_boots"
+    },
+    "6": {
+      "item": "minecraft:gold_ingot"
+    },
+    "8": {
+      "item": "minecraft:gold_ingot"
+    }
+  },
+  "result": {
+    "item": "creraces:yellow_mermaid_armor_boots",
+    "count": 1
+  }
+}

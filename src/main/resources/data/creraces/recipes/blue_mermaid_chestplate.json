@@ -1,0 +1,26 @@
+{
+  "group": "creraces",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    " 4 "
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:diamond"
+    },
+    "1": {
+      "item": "minecraft:diamond_chestplate"
+    },
+    "2": {
+      "item": "minecraft:diamond"
+    },
+    "4": {
+      "item": "minecraft:diamond_block"
+    }
+  },
+  "result": {
+    "item": "creraces:blue_mermaid_armor_chestplate",
+    "count": 1
+  }
+}

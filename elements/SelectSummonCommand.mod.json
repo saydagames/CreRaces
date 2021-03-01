@@ -1,0 +1,11 @@
+{
+  "_fv": 15,
+  "_type": "command",
+  "definition": {
+    "commandName": "select",
+    "permissionLevel": 1,
+    "onCommandExecuted": {
+      "name": "SelectSummon"
+    }
+  }
+}

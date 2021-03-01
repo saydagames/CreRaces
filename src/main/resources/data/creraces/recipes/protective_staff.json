@@ -1,0 +1,30 @@
+{
+  "group": "creraces",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    " 4 ",
+    " 7 "
+  ],
+  "key": {
+    "0": {
+      "tag": "minecraft:small_flowers"
+    },
+    "1": {
+      "item": "minecraft:carved_pumpkin"
+    },
+    "2": {
+      "tag": "minecraft:small_flowers"
+    },
+    "4": {
+      "item": "minecraft:iron_block"
+    },
+    "7": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "creraces:protective_staff",
+    "count": 1
+  }
+}

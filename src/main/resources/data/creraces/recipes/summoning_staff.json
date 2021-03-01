@@ -1,0 +1,30 @@
+{
+  "group": "creraces",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    " 4 ",
+    " 7 "
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:rotten_flesh"
+    },
+    "1": {
+      "tag": "minecraft:coals"
+    },
+    "2": {
+      "item": "minecraft:rotten_flesh"
+    },
+    "4": {
+      "item": "minecraft:bone"
+    },
+    "7": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "creraces:summoning_staff",
+    "count": 1
+  }
+}

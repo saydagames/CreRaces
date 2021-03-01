@@ -1,0 +1,26 @@
+{
+  "group": "creraces",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    " 4 "
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:oxeye_daisy"
+    },
+    "1": {
+      "item": "minecraft:iron_helmet"
+    },
+    "2": {
+      "item": "minecraft:oxeye_daisy"
+    },
+    "4": {
+      "item": "minecraft:iron_block"
+    }
+  },
+  "result": {
+    "item": "creraces:green_mermaid_armor_helmet",
+    "count": 1
+  }
+}
